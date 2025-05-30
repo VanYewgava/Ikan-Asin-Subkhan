@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ikan Asin Subkhan - Ikan asin berkualitas tinggi sejak 1970. Nikmati cita rasa tradisional yang lezat!">
+    <meta name="keywords" content="ikan asin, jual ikan asin, ikan asin berkualitas, ikan asin murah">
+    <meta name="author" content="Ikan Asin Subkhan">
+    <title>Ikan Asin Subkhan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+
+  <body class="bg-gray-100" x-data="{ open: false }">
+    <nav class="bg-teal-900 text-white p-4  fixed w-full z-50 transition-all duration-500 ease-in-out"
+    :class="{'bg-teal-900 shadow-lg': !isAtTop, 'bg-transparent': isAtTop}" x-data="{ open: false, isAtTop: true }"
+    x-init="window.addEventListener('scroll', () => { isAtTop = window.pageYOffset <= 50 })">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="assets/img/logo1.png" alt="Logo" class="w-12 mr-3" />
+          <h1 class="text-2xl font-bold">
+            Ikan Asin <span class="text-blue-600">Subkhan</span>
+          </h1>
+        </div>
+        <div class="space-x-6 hidden md:flex">
+          <a href="#beranda" class="hover:text-gray-300">Beranda</a>
+          <a href="#tentang" class="hover:text-gray-300">Tentang</a>
+          <a href="#produk" class="hover:text-gray-300">Produk</a>
+          <a href="#kontak" class="hover:text-gray-300">Kontak</a>
+          <a href="https://wa.me/6285640274222" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500">Pesan Sekarang</a>
+        </div>
+        <div class="md:hidden">
+          <button @click="open = !open" class="focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div x-show="open" class="absolute top-full right-4 bg-teal-800 rounded-lg shadow-lg p-4 space-y-2 md:hidden z-50">
+        <a href="#beranda" class="block text-white hover:text-gray-300">Beranda</a>
+        <a href="#tentang" class="block text-white hover:text-gray-300">Tentang</a>
+        <a href="#produk" class="block text-white hover:text-gray-300">Produk</a>
+        <a href="#kontak" class="block text-white hover:text-gray-300">Kontak</a>
+        <a href="https://wa.me/6285640274222" class="block bg-yellow-400 text-black px-1 py-1 rounded hover:bg-yellow-500">Pesan Sekarang</a>
+      </div>
+    </nav>
+
+    <section
+      id="beranda"
+      class="h-screen bg-cover bg-center"
+      style="background-image: url('assets/img/cover.jpg')"
+    >
+      <div
+        class="h-full w-full bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-4"
+      >
+      
+        <h2 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-up" >IKAN ASIN SUBKHAN</h2>
+        <p class="max-w-xl text-lg md:text-xl" data-aos="fade-up">
+          Menghadirkan cita rasa tradisional dengan kualitas ikan asin terbaik
+          sejak tahun 1970.
+        </p>
+      </div>
+    </section>
+<!-- Tambahkan bagian Login -->
+<section id="login" class="py-20 bg-white text-gray-800">
+  <div class="container mx-auto px-4 max-w-md text-center">
+    <h3 class="text-2xl font-bold mb-4">Masuk untuk Belanja</h3>
+    <form class="bg-gray-100 p-6 rounded shadow">
+      <input type="email" placeholder="Email" class="w-full p-2 mb-4 border rounded" required />
+      <input type="password" placeholder="Kata Sandi" class="w-full p-2 mb-4 border rounded" required />
+      <button class="bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 w-full">Login</button>
+    </form>
+  </div>
+</section>
+
+
+
+    <section id="produk" class="py-20 bg-white text-gray-800">
+      <div class="container mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-4" data-aos="fade-up" data-aos-delay="10">PRODUK KAMI</h3>
+        <p class="underline" data-aos="fade-up" data-aos-delay="30">Harga bisa berubah tergantung musim</p>
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+          <div class="border rounded-xl p-6 shadow hover:shadow-lg transition" data-aos="zoom-in">
+            <img
+              src="assets/img/deles.jpeg"
+              alt="Deles"
+              class="w-full h-21 object-cover mb-4 rounded"
+            />
+            <h4 class="text-xl font-semibold mb-2">IKAN LAYANG DELES</h4>
+            <p class="text-sm mb-3">
+              Ikan asin berkualitas tinggi, cocok untuk berbagai olahan masakan.
+            </p>
+            <span class="text-teal-600 font-bold">Rp 35.000/kg</span>
+          </div>
+          <div class="border rounded-xl p-6 shadow hover:shadow-lg transition" data-aos="zoom-in">
+            <img
+              src="assets/img/lemuru.jpeg"
+              alt="Ikan Lemuru"
+              class="w-full h-21 object-cover mb-4 rounded"
+            />
+            <h4 class="text-xl font-semibold mb-2">IKAN LEMURU</h4>
+            <p class="text-sm mb-3">
+              Lemuru gurih, asin, dan lezat khas rumahan.
+            </p>
+            <span class="text-teal-600 font-bold">Rp 20.000/kg</span>
+          </div>
+          <div class="border rounded-xl p-6 shadow hover:shadow-lg transition" data-aos="zoom-in">
+            <img
+              src="assets/img/juwi.jpeg"
+              alt="Ikan Juwi"
+              class="w-full h-21 object-cover mb-4 rounded"
+            />
+            <h4 class="text-xl font-semibold mb-2">IKAN JUWI</h4>
+            <p class="text-sm mb-3">
+              Juwi pilihan, renyah dan cocok untuk sambal atau tumisan.
+            </p>
+            <span class="text-teal-600 font-bold">Rp 16.000/kg</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Tambahkan bagian Keranjang Belanja -->
+<section id="keranjang" class="py-20 bg-gray-50 text-gray-800">
+  <div class="container mx-auto px-4 text-center">
+    <h3 class="text-3xl font-bold mb-4">Keranjang Belanja</h3>
+    <p class="mb-6">Belum ada produk di keranjang.</p>
+    <button class="bg-yellow-500 px-6 py-2 text-white rounded hover:bg-yellow-600">Lanjutkan Belanja</button>
+  </div>
+</section>
+<!-- Tambahkan bagian Info Daya Simpan & Pengemasan -->
+<section id="informasi" class="py-20 bg-white text-gray-800">
+  <div class="container mx-auto px-4 text-center">
+    <h3 class="text-3xl font-bold mb-4">Informasi Penyimpanan & Pengemasan</h3>
+    <p class="max-w-2xl mx-auto mb-4">
+      Produk ikan asin Subkhan dikemas menggunakan plastik vacuum food grade untuk menjaga kesegaran dan ketahanan produk.
+    </p>
+    <p class="max-w-2xl mx-auto">
+      Daya simpan: <b>hingga 6 bulan</b> jika disimpan di tempat kering dan sejuk. Untuk hasil terbaik, simpan dalam wadah tertutup rapat atau lemari es.
+    </p>
+  </div>
+</section>
+
+<!-- Tambahkan fitur Pembayaran Otomatis -->
+<section id="pembayaran" class="py-20 bg-gray-100 text-gray-800">
+  <div class="container mx-auto px-4 text-center">
+    <h3 class="text-3xl font-bold mb-4">Pembayaran</h3>
+    <p class="mb-4">Pilih metode pembayaran:</p>
+    <div class="flex justify-center gap-6">
+      <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Transfer Bank</button>
+      <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">QRIS</button>
+      <button class="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600">COD</button>
+    </div>
+  </div>
+</section>
+    <section id="tentang" class="py-20 bg-gray-800 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-4 " data-aos="fade-up">Tentang Kami</h3>
+        <p class="max-w-3xl mx-auto text-gray-300" data-aos="fade-up" data-aos-delay="10">
+          Ikan Asin Subkhan merupakan usaha rumahan yang telah berdiri sejak
+          1970 di daerah pesisir Jawa Tengah. Kami memproduksi berbagai jenis
+          ikan asin seperti ikan layang deles, ikan lemuru, dan ikan juwi dengan
+          menjaga kualitas, kebersihan, dan cita rasa tradisional. Produk kami
+          telah dipercaya oleh berbagai pelanggan di pasar lokal maupun luar
+          kota.
+        </p><br>
+        <p class="max-w-3xl mx-auto text-gray-300" data-aos="fade-up" data-aos-delay="10">
+          Ikan asin mempunyai banyak nutrisi yang baik bagi tubuh, ikan asin mengandung <i>Energi: 193 kcal, Protein: 42 gram, Karbohidrat: 0,
+              Lemak: 1,5 gram, Kalsium: 200 miligram, Fosfor: 300 miligram, Zat besi: 3 miligram dan
+              Vitamin B1: 0,01 miligram.</i> Mengonsumsi ikan asin memperoleh banyak manfaat bagi tubuh
+          diantaranya <i>Baik untuk kesehatan gigi dan tulang, Membantu mempercepat penyembuhan luka,
+              Mncegah anemia, Menjaga sistem imun tubuh, dan masih banyak lagi.</i>
+          </p>
+      </div>
+    </section>
+    <section id="testimoni" class="py-20 bg-gray-100 text-gray-800">
+      <div class="container mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-4" data-aos="fade-up">Testimoni Pelanggan</h3>
+        <p class="max-w-2xl mx-auto text-gray-600 mb-8" data-aos="fade-up">
+          Apa kata pelanggan kami tentang Ikan Asin Subkhan? Berikut beberapa testimoni dari pelanggan setia kami.
+        </p>
+
+        <div x-data="{ activeTestimoni: 0 }" class="relative max-w-3xl mx-auto">
+          <!-- Testimoni Slider -->
+          <div class="overflow-hidden relative">
+            <div class="transition-transform transform duration-500"
+              :style="'translateX(-' + activeTestimoni * 100 + '%)'">
+              
+              <!-- Testimoni 1 -->
+              <div class="flex-shrink-0 w-full p-6 bg-white rounded-lg shadow-lg text-center" data-aos="fade-up">
+                <img src="assets/img/user1.jpg" alt="Testimoni 1" class="mx-auto w-16 h-16 rounded-full mb-3">
+                <p class="text-gray-700 italic">"Ikan asinnya sangat berkualitas! Tidak terlalu asin dan tetap segar. Recomended!"</p>
+                <h4 class="mt-3 font-semibold text-teal-600">- Budi Santoso</h4>
+              </div>
+
+              <!-- Testimoni 2 -->
+              <div class="flex-shrink-0 w-full p-6 bg-white rounded-lg shadow-lg text-center" data-aos="fade-up">
+                <img src="assets/img/user2.jpg" alt="Testimoni 2" class="mx-auto w-16 h-16 rounded-full mb-3">
+                <p class="text-gray-700 italic">"Harga terjangkau dengan kualitas premium. Pelayanan juga sangat baik!"</p>
+                <h4 class="mt-3 font-semibold text-teal-600">- Siti Rohmah</h4>
+              </div>
+
+              <!-- Testimoni 3 -->
+              <div class="flex-shrink-0 w-full p-6 bg-white rounded-lg shadow-lg text-center" data-aos="fade-up">
+                <img src="assets/img/user3.jpg" alt="Testimoni 3" class="mx-auto w-16 h-16 rounded-full mb-3">
+                <p class="text-gray-700 italic">"Saya sering beli di sini, ikannya renyah dan tidak berbau menyengat. Langganan!"</p>
+                <h4 class="mt-3 font-semibold text-teal-600">- Andi Wijaya</h4>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </section>
+
+
+    <section id="kontak" class="py-20 bg-gray-900 text-white" data-aos="fade-up" data-aos-delay="10">
+      <div class="container mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-4">Hubungi Kami</h3>
+        <p class="mb-6">
+          Untuk pemesanan dan informasi lebih lanjut, hubungi kami melalui kontak berikut:
+        </p>
+        <p class="text-gray-300">
+          WhatsApp:
+          <a href="https://wa.me/6285640274222" class="text-teal-400 underline">+6285640274222</a>
+        </p>
+        <p class="text-gray-300">
+          Email: <span class="text-teal-400">ikanasinsubkhan@gmail.com</span>
+        </p>
+        <p class="text-gray-300">
+          Alamat: Jl Kusuma Bangsa No.24, Panjang Baru, Kecamatan Pekalongan Utara, Kota Pekalongan, Jawa Tengah
+        </p>
+    
+        <!-- Wrapper untuk responsivitas -->
+        <div class="relative w-full max-w-3xl mx-auto mt-6 overflow-hidden rounded-lg shadow-lg">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9460.316018753543!2d109.68039306138746!3d-6.863948924417321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7025c27b53378b%3A0x7c0d68a2c5f784db!2sIkan%20Asin%20Muzali%20(Hj.%20Amin)!5e0!3m2!1sen!2sid!4v1743262206598!5m2!1sen!2sid" 
+            width="100%" height="400" style="border:0;" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            class="w-full h-[400px] sm:h-[350px] md:h-[400px]">
+          </iframe>
+        </div>
+    
+      </div>
+    </section>
+    
+
+    <footer class="bg-gray-800 text-center py-6 text-gray-400" >
+      <p>&copy; 2025 Ikan Asin Subkhan · Cita Rasa Laut Nusantara</p>
+    </footer>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
